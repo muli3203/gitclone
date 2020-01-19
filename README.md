@@ -1,6 +1,28 @@
-# GIT
+# GITHUB SEARCH.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+
+# Author
+
+Muli Cheryl.
+
+## DESCRIPTION
+
+This is an Angular based application. Once logged into github a user is able to acces different repositories from different users.
+A user can browse on the different repositries can clone or fork a repository.
+A user can search for different repositories or different github users and brwse through their information.
+
+## Here is a live site link .
+
+
+
+## Setup Requirements
+
+Use ctrl+alt+t command to open the terminal.
+Run git clone https://github.com/muli3203/quotes-log
+cd into quotes-log 
+Run code. to open the cloned repository on Vscode .
+Run atom. to open the cloned repository on Atom.
 
 ## Development server
 
