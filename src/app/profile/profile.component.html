@@ -1,12 +1,12 @@
 <link href="https://fonts.googleapis.com/css?family=Amarante&display=swap" rel="stylesheet">
 <div class="container">
-  <div class="jumbotron">
+  <!-- <div class="jumbotron">
     <h1>GIT-APP</h1>
     <form action="" class="search">
       <input type="text" placeholder="Search.." class="form-control" [(ngModel)]="username" name="name"
         (keyup)="findProfile()">
     </form>
-  </div>
+  </div> -->
 <div *ngIf="profile" class="container">
   <img src="{{profile.avatar_url}}">
 </div>
@@ -14,12 +14,46 @@
         <span>{{profile.followers}} followers</span>
         <span>{{profile.following}} following</span>
         <span>{{profile.repositories}} repositories</span>
+    <!-- 
+        <div *ngFor="let repos of repos">
+            <h2>{{repos.name}}</h2>
+                <p>{{repos.description}}</p>
+            <a href="{{repos.html_url}}">View on Github</a> 
 
-    <div *ngFor="let repos of repos">
-        <h2>{{repos.name}}</h2>
-            <p>{{repos.description}}</p>
-           <a href="{{repos.html_url}}">View on Github</a> 
-
-    </div>
+        </div> -->
   </div>
 </div>
+<div class="row">
+        <div class="col-md-4">
+            <img src="{{ user.avatar_url }}" class="img-fluid" alt="me" />
+        </div>
+        <div class="col-md-8">
+            <div class="about">
+                <span class="badge badge-primary mr-2">
+                    {{ user.public_repos }} Public Repos</span>
+                <span class="badge badge-secondary mr-2">{{ user.public_gists }} Gists</span>
+                <span class="badge badge-success mr-2">
+                    {{ user.followers }} Followers</span>
+                <span class="badge badge-danger mr-2">
+                    {{ user.following }} Following</span>
+            </div>
+            <br />
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Username:</strong>{{ user.login }}
+                </li>
+                <li class="list-group-item">
+                    <strong>Location:</strong>{{ user.location }}
+                </li>
+                <li class="list-group-item">
+                    <strong>Email:</strong>{{ user.email }}
+                </li>
+                <li class="list-group-item">
+                    <strong>Blog:</strong>{{ user.blog }}
+                </li>
+                <li class="list-group-item">
+                    <strong>Member Since: </strong>{{ user.created_at | date }}
+                </li>
+            </ul>
+        </div>
+    </div>
