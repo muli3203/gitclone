@@ -8,7 +8,7 @@
     </form>
   </div>
 <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 img">
             <img src="{{ profile.avatar_url }}" class="img-fluid" alt="me" />
         </div>
         <div class="col-md-8">
@@ -22,6 +22,7 @@
                     {{ profile.following }} Following</span>
             </div>
             <br />
+            <div>
             <ul class="list-group">
                 <li class="list-group-item">
                     <strong>profilename:</strong>{{ profile.login }}
@@ -41,14 +42,4 @@
             </ul>
         </div>
     </div>
-
-  <div class="btn">
-
-    <!-- <div *ngFor="let repos of repos">
-        <h2>{{repos.name}}</h2>
-            <p>{{repos.description}}</p>
-           <a href="{{repos.html_url}}">View on Github</a> 
-
-    </div> -->
-  </div>
 </div>
