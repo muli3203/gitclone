@@ -12,9 +12,11 @@ This is an Angular based application. Once logged into github a user is able to 
 A user can browse on the different repositries can clone or fork a repository.
 A user can search for different repositories or different github users and brwse through their information.
 
-## Here is a live site link .
+## Here is a live site link ..
 
+Live site: https://muli3203.github.io/gitclone/
 
+[![codebeat badge](https://codebeat.co/badges/1d378bb1-bd53-407c-ba99-0c06a3c4bd15)](https://codebeat.co/projects/github-com-muli3203-gitclone-master)
 
 ## Setup Requirements
 
