@@ -1,3 +1,7 @@
 .container{
-    font-family: 'Amarante', cursive;
+    font-family: 'Chilanka', cursive;
+    text-align: center;
+}
+.repos{
+    height: 250px;
 }
