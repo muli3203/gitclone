@@ -1,18 +1,15 @@
 <link href="https://fonts.googleapis.com/css?family=Amarante&display=swap" rel="stylesheet">
-
 <div class="container">
   <div class="jumbotron">
     <h1>GIT-APP</h1>
     <form action="" class="search">
       <input type="text" placeholder="Search.." class="form-control" [(ngModel)]="username" name="name"
         (keyup)="findProfile()">
-
     </form>
   </div>
-</div>
 <div *ngIf="profile" class="container">
   <img src="{{profile.avatar_url}}">
-
+</div>
   <div class="btn">
         <span>{{profile.followers}} followers</span>
         <span>{{profile.following}} following</span>
