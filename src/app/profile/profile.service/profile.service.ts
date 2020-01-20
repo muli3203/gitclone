@@ -9,11 +9,7 @@ import 'rxjs';
 export class ProfileService {
 
   username: string;
-  clientid: string;
-  clientsecret: string;
-  httpOptions = {
-    headers: new HttpHeaders({ 'Authorization': 'token 4c76ad7544325a9093b754f55d858b1dd06ca2b5' })
-  };
+  auth_token: string = "4c76ad7544325a9093b754f55d858b1dd06ca2b5";
 
 
   constructor(public http: HttpClient) {
@@ -25,10 +21,10 @@ export class ProfileService {
   }
 
   getProfileInfo() {
-    return this.http.get("https://api.github.com/users/" + this.username, this.httpOptions);
+    return this.http.get("https://api.github.com/users/" + this.username + "?access_token=" + this.auth_token);
   }
   getRepos() {
-    return this.http.get("https://api.github.com/users/" + this.username + "/repos", this.httpOptions);
+    return this.http.get("https://api.github.com/users/" + this.username + "/repos" + "?access_token=" + this.auth_token);
   }
   updateProfile(username: string) {
     this.username = username;
