@@ -1,47 +1,33 @@
 <link href="https://fonts.googleapis.com/css?family=Chilanka&display=swap" rel="stylesheet">
 
 <div class="container">
+  <hr>
   <div class="jumbotron">
-    <h1>GIT-APP</h1>
-    <form action="" class="search">
-      <input type="text" placeholder="Search Repositories.." class="form-control" [(ngModel)]="username" name="name"
-        (keyup)="findProfile()">
-    </form>
+      <h1>GIT-APP</h1>
+      <form action="" class="search">
+        <input type="text" placeholder="Search Username.." class="form-control" [(ngModel)]="username" name="name"
+          (keyup)="findProfile()">
+      </form>
+
+    
+    
   </div>
-  <div class="control text-center">
-    <img src="{{ profile.avatar_url }}" class="img-fluid" alt="me" />
-
+  
+  <div class="text-center">
+    <h2 class="panel-title">REPOSITORIES</h2>
     <div class="row">
-      <div class="col-md-12">
-        <div class="about">
-          <span class="badge badge-primary mr-2">
-            {{ profile.public_repos }} Public Repos</span>
-          <span class="badge badge-secondary mr-2">{{ profile.public_gists }} Gists</span>
-          <span class="badge badge-success mr-2">
-            {{ profile.followers }} Followers</span>
-          <span class="badge badge-danger mr-2">
-            {{ profile.following }} Following</span>
+      <div class="card col-4 repo" *ngFor="let repo of repos">
+        <div class="card-body">
+          <p>{{repo.name}}</p>
+          <p>{{repo.description}}</p>
         </div>
-        <hr>
-        <div class="text-center">
-          <h2 class="panel-title">REPOSITORIES</h2>
-          <div class="row">
-            <div class="card col-4 repo" *ngFor="let repos of repos">
-              <div class="card-body">
-                <p>{{repos.name}}</p>
-                <p>{{repos.description}}</p>
-              </div>
-              <div class="card-footer">
-                <p> <a href="{{repos.html_url}}" target="_blank" class="btn btn-sm btn-info pull-right">View on
-                    github</a></p>
-              </div>
-              <br>
-            </div>
-          </div>
+        <div class="card-footer">
+          <p> <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-info pull-right">View on
+              github</a></p>
         </div>
-
+        <br>
       </div>
     </div>
-
   </div>
+
 </div>

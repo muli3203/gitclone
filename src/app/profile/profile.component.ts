@@ -38,10 +38,10 @@ export class ProfileComponent implements OnInit {
       });
     }
 
-  ngOnInit() {
-    this.profileservice.updateProfile('muli3203');
-    this.profileservice.getProfileInfo().subscribe(profile=>this.profile = profile);
-    this.profileservice.getRepos().subscribe(repos=>this.repos = repos);
-  }
+    ngOnInit() {
+      this.profileservice.updateProfile('muli3203');
+      this.profileservice.getProfileInfo().subscribe(profile=>this.profile = profile);
+      this.profileservice.getRepos().subscribe(repos=>this.repos = repos);
+     }
 
 }
