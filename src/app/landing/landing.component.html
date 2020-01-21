@@ -1,0 +1,41 @@
+
+
+    <div class="container">
+    <div class="row">
+    <div class="col-md-6 img">
+      <img src="{{ profile.avatar_url }}" class="img-fluid" alt="me" />
+    </div>
+    <div class="col-md-6">
+      <div class="about">
+        <span class="badge badge-primary mr-2">
+          {{ profile.public_repos }} Public Repos</span>
+        <span class="badge badge-secondary mr-2">{{ profile.public_gists }} Gists</span>
+        <span class="badge badge-success mr-2">
+          {{ profile.followers }} Followers</span>
+        <span class="badge badge-danger mr-2">
+          {{ profile.following }} Following</span>
+      </div>
+      <br />
+      <div>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <strong>profilename:</strong>{{ profile.login }}
+          </li>
+          <li class="list-group-item">
+            <strong>Location:</strong>{{ profile.location }}
+          </li>
+          <li class="list-group-item">
+            <strong>Email:</strong>{{ profile.email }}
+          </li>
+          <li class="list-group-item">
+            <strong>Blog:</strong>{{ profile.blog }}
+          </li>
+          <li class="list-group-item">
+            <strong>Member Since: </strong>{{ profile.created_at | date }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
