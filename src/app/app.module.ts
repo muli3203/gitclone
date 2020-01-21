@@ -10,6 +10,7 @@ import { ProfileService } from './profile/profile.service/profile.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SearchComponent } from './search/search.component';
 import { DatePipe } from './date.pipe';
+import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DatePipe } from './date.pipe';
     ProfileComponent,
     NavbarComponent,
     SearchComponent,
-    DatePipe
+    DatePipe,
+    LandingComponent,
   ],
   imports: [
     BrowserModule,

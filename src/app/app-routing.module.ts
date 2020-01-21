@@ -1,3 +1,4 @@
+import { LandingComponent } from './landing/landing.component';
 // import { ProfileComponent } from './profile/profile.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -6,8 +7,10 @@ import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
+  {path: "", component:LandingComponent},
   {path: "profile", component: ProfileComponent},
-  {path: "search", component: SearchComponent}
+  {path: "search", component: SearchComponent},
+  
 ];
 
 @NgModule({
